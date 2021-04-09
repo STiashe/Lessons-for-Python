@@ -1,16 +1,13 @@
-def del_num():
-    try:
-        x = input('ВВЕДИТЕ ЧИСЛО: ')
-        y = input('ВВЕДИТЕ ЧИСЛО: ')
-    except ValueError:
-        return
+def del_num(x=input('ВВЕДИТЕ ЧИСЛО: '), y=input('ВВЕДИТЕ ЧИСЛО: ')):
     if x.isalpha() or y.isalpha():
         print('ВЫ ВВЕЛИ НЕ ЧИСЛО!!!')
-        return
     elif int(y) == 0:
         print('ДЕЛИТЬ НА НОЛЬ НЕЛЬЗЯ!!!')
+    try:
+        res_val = int(x) / int(y)
+    except ValueError:
         return
-    res_value = int(x) / int(y)
-    return res_value
+    return res_val
+
 
 print(del_num())
