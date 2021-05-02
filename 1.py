@@ -2,11 +2,19 @@ from time import sleep
 
 
 class TrafficLight:
-    __color = 0
+    __color = "Черный"
 
     def running(self):
-        TrafficLight.__color += 1
+        while True:
+            print('Красный')
+            sleep(7)
+            print('Желтый')
+            sleep(2)
+            print('Зеленый')
+            sleep(7)
+            print('Желтый')
+            sleep(2)
 
 
-a = TrafficLight()
-print(a)
+trafficlight = TrafficLight()
+trafficlight.running()
